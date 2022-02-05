@@ -55,26 +55,34 @@ public class MainClass4 {
 		 * 	score >=90 && score<=95  	A0		 
 		 *
 		 */
-		int score=101;
-		bCheck = c<0 || c>100;
-		System.out.println(bCheck);
-		
-		Scanner scan=new Scanner(System.in);
-		// System.in (키보드 입력값 받기)
-		// BufferedReader => 예외처리
-		System.out.print("ID입력:");
-		String id=scan.next();
-
-		System.out.print("Password입력:");
-		String pw=scan.next();
-
-		if(id.equals("admin") && pw.equals("1234"))
-		{
-			System.out.println("로그인 되었습니다.");
-		}
-		else
-			System.out.println("ID나 비밀번호가 틀립니다.");
-		
+//		int score=101;
+//		bCheck = c<0 || c>100;
+//		System.out.println(bCheck);
+//		
+//		Scanner scan=new Scanner(System.in);
+//		// System.in (키보드 입력값 받기)
+//		// BufferedReader => 예외처리
+//		System.out.print("ID입력:");
+//		String id=scan.next();
+//
+//		System.out.print("Password입력:");
+//		String pw=scan.next();
+//
+//		if(id.equals("admin") && pw.equals("1234"))
+//		{
+//			System.out.println("로그인 되었습니다.");
+//		}
+//		else
+//			System.out.println("ID나 비밀번호가 틀립니다.");
+		// 대입엽산자 ( =, +=, -=)
+				int aaa=10;
+				aaa=10+20;
+				int bbb=10;
+				bbb++; //++bbb
+				bbb=bbb+1; // bbb=bbb+1;
+				bbb+=1;
+				bbb+=5;
+				bbb-=10; // bbb=bbb-10
 				
 	}
 
