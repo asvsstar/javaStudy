@@ -21,6 +21,21 @@ public class MainClass2 {
 		System.out.println(c);
 		System.out.println(++c);
 		
+		//부정연산자
+		boolean bCheck=false;
+		//예약일때
+		while(true)
+		{
+			bCheck=!bCheck;
+			if(bCheck==true) {
+				System.out.println("사용자차례");
+			}
+			else
+			{
+				System.out.println("컴퓨터 차례");
+			}
+		}
+		
 	}
 
 }
