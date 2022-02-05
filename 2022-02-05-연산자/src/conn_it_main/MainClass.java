@@ -5,7 +5,10 @@ public class MainClass {
 	/*
 	 * 멤버변수 : 객체마다 따라 사용하는 변수
 	 * 			한개를 가지고 공유하는 변수
+	 * 지역변수 : 메소드안에서만 사용
+	 * 			지역변수 /매개변수
 	 */
+	s
 	
 	public static void main(String[] args) {
 		
