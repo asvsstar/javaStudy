@@ -23,19 +23,43 @@ public class MainClass2 {
 		
 		//부정연산자
 		boolean bCheck=false;
-		//예약일때
-		while(true)
-		{
-			bCheck=!bCheck;
-			if(bCheck==true) {
-				System.out.println("사용자차례");
-			}
-			else
-			{
-				System.out.println("컴퓨터 차례");
-			}
-		}
-		
+		//예약일때 !예약일 ㅇ ㅏ니면 ==> 비활성화
+//		while(true)
+//		{
+//			bCheck=!bCheck;
+//			if(bCheck==true) {
+//				System.out.println("사용자차례");
+//			}
+//			else
+//			{
+//				System.out.println("컴퓨터 차례");
+//			}
+//		}
+//		//형변환 연산자
+		int aa=(int)10.5; //강제 형변환
+		System.out.println(aa);
+		char cc='홍';
+		System.out.println((int)cc);
+		int aaa='A';
+		System.out.println(aaa);
+		// int <==> double => boolean은 형변환이 없다
+		aaa=67;
+		System.out.println((char)aaa);
+		System.out.println((int)'0');
+		/*
+		 * 자바에서 숫자 표현
+		 * 문자 => '문자한개'
+		 * 문자열 => '여러문자"
+		 * 숫자표현 : 
+		 * 			10진번
+		 * 			16진번 0xFF		//0x 붙음
+		 * 			8진법  012 		// 0붙음
+		 * 			2진법 0b01111111 // 0b붙음
+		 */
+		System.out.println(012);
+		System.out.println(0xff);
+		System.out.println(0b1111111);
+	
 	}
 
 }
