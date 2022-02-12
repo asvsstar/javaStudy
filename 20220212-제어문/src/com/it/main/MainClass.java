@@ -98,10 +98,8 @@ public class MainClass {
 			System.out.printf("%.2f",a/(double)b);
 			//Math.round(), Math.ceil()
 		}
-		
 	}
-	
-
+	//알고리즘 (자료구조) => 디자이 패턴(싱글턴, 팩토리)
 }
 
 
