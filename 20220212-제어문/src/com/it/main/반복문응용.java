@@ -11,7 +11,7 @@ import org.jsoup.select.Elements;
  * ------ 예외복구(try~catch)
  * ------ 예외회피(선언) throws
  */
-
+import java.util.*;
 public class 반복문응용 {
 
 	public static void main(String[] args) {
@@ -19,6 +19,10 @@ public class 반복문응용 {
 		try
 		{
 			// 정상 수행문장
+			Scanner scan =new Scanner(System.in);
+			System.out.print("검색어");
+			String fd=scan.next();
+			
 			int k=1;
 			for(int i=1;i<=4;i++)
 			{
@@ -31,6 +35,7 @@ public class 반복문응용 {
 				Elements title=doc.select("table.list-wrap a.title");
 				Elements singer=doc.select("table.list-wrap a.artist");
 				for(int j=0; j<50;j++) {
+					if(title.get(j).text().contains(fd))
 					System.out.println(k+"."+title.get(j).text()+" "
 							+singer.get(j).text());
 					k++;
@@ -38,6 +43,7 @@ public class 반복문응용 {
 				}
 			}
 		}catch(Exception ex){/* 에러 복구*/}
+		System.out.println("====================================================================");
 	}
 
 }
