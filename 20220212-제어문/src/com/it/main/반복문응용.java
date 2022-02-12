@@ -20,7 +20,7 @@ public class 반복문응용 {
 		{
 			// 정상 수행문장
 			Scanner scan =new Scanner(System.in);
-			System.out.print("검색어");
+			System.out.print("검색어 : ");
 			String fd=scan.next();
 			
 			int k=1;
