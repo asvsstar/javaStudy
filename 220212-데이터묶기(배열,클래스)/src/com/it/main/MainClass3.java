@@ -41,11 +41,82 @@ package com.it.main;
  * 			구현부
  * 			return 결과값
  * 		}
+ * 		예) 로그인 : id, pwd
+ * 		boolean login(String id, String pwd)
+ *		{
+ * 			로그인처리
+ * 			return 결과값 (true/false)
+ *		}
+ *		아이디체크 : id
+ *		boolean idcheck(String id)
+ *		{
+ *			아이디중복체크
+ *			return 결과값
+ *		}	
+ *		***** 사용자가 보내주는 데이터(매개변수) => 3개이상 초과X (권장)
+ *			  => 배열, 클래스
+ *		검색 : 검색어 => 데이터가 많다
+ *		***** 결과값은 1개만 사용
+ *		String[] movieFind(String fd)
+ *		{
+ *		검색
+ *		return 배열
+ *		}
+ *		------------------------------------------------------
+ *		리턴형(결과값) ==> 사용자가 보내주는 값이 없는 경우
+ *		random, trim
+ *		double random(), String trim() => 좌우의 공백 제거
+ *		==> 목록출력 String[] list()
+ *		------------------------------------------------------
+ *		결과값이 없는 경우
+ *		--> 자체 출력
+ *			구구단
+ *			void gugudan() ==> return을 생략이 가능 (컴파일러가 자동으로 추가)
+ *			void gugudan(int dan)
+ *
  */
+import java.util.*;
+//클래스의 핵심 9변수, 메소드:재사용)
 public class MainClass3 {
-
+	// 로그인 => id,pwd => 결과값은 boolean
+	static boolean login(String id, String pwd)
+	{
+		final String ID="admin";
+		final String PWD="1234";
+		boolean bCheck=false;
+		if(id.equals(ID) && pwd.equals(PWD))
+		{
+			bCheck=true;
+		}
+		else
+		{
+			bCheck=false;
+		}
+		return bCheck;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//사용자 입력
+		Scanner scan = new Scanner(System.in);
+		System.out.print("ID입력:");
+		String id=scan.next();
+		System.out.print("Password입력:");
+		String pwd=scan.next();
+		//결과값을 받는다
+		boolean bCheck = login(id,pwd); // 호출 =>  메소드명(값,값)
+		if(bCheck==true)
+		{
+			
+			System.out.println(id+"님 로그인되었습니다!!");
+		}
+		else
+		{
+			System.out.println("아이디나 비밀번호가 틀립니다!!");
+		}
+				
+		
+		// 자동으로 return
+		
 
 	}
 
