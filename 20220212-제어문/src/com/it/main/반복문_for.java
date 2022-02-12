@@ -36,6 +36,28 @@ package com.it.main;
  *					반복 수행
  * 				}
  * 			}
+ * 
+ * 			*
+ * 			**
+ * 			***
+ * 			****
+ * 			i	j
+ * 			줄수	별표
+ * 			1	1
+ * 			2	2
+ * 			3	3
+ * 			4	4
+ * 
+ * 			****
+ * 			***
+ * 			**
+ * 			*
+ * 			i	j		=> 역순으로 출력하면 더한다 (수열) => AI(이산수학)
+ * 			줄수	별표
+ * 			1	4		=> i+j=5 ==> j=5-i
+ * 			2	3
+ * 			3	3
+ * 			4	1
  */
 public class 반복문_for {
 
@@ -45,6 +67,15 @@ public class 반복문_for {
 		for(int i=1;i<=10;i++)
 		{
 			System.out.println(i);
+		}
+		for(int i=1; i<=4;i++) 
+		{
+
+			for(int j=1; j<=i;j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
 		}
 		
 	}
