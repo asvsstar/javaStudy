@@ -77,7 +77,22 @@ public class 반복문_for {
 			}
 			System.out.println();
 		}
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+		}
+		//구구단
+		for(int i=2; i<=9;i++) 
+		{
+
+			for(int j=1; j<=9;j++)
+			{
+				System.out.print(i+"*"+j+"="+(i*j)+"\t" );
+			}
+			System.out.println();
+		}
 		
 	}
+	
 
 }
