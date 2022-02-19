@@ -43,12 +43,73 @@ package com.it.main;
  *
  *		접근 지정(범위), 옵션(메모리 할당없이 사용=> static, 메소드 선언 : abstrect)
  *		매개변수 => 사용자로부터 받은 값
+ *
+ *		
  */
 public class MainClass {
+	public static boolean isLogin(String id, String pwd)
+	{
+		boolean bCheck=false;
+		// 처리 => 결과값
+		if(id.equals("admin") && pwd.equals("1234"))
+		{
+			bCheck=true;
+		}
+		else
+		{
+			bCheck=false;
+		}
+		return bCheck;
+	}
 	// 프로그램의 시작과 종료 => main을 한개이상 포함 => 없으면 실행 불가능
  	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+ 		String id="hong";
+ 		String pwd="1234";
+ 		
+ 		boolean bCheck=isLogin(id, pwd);
+ 		if(bCheck==true)
+ 		{
+ 			System.out.println("로그인 되었습니다!!");
+ 		}
+ 		else
+ 		{
+ 			System.out.println("로그인 실패했습니다!");
+ 		}
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
