@@ -1,5 +1,6 @@
 package com.it.main;
 import java.sql.*;
+
 /*
  *  1. 드라이버 등록 => Class.forName("com.mysql.cj.jadbc.Driver")
  *	2. SQL문장 제작 => SELECT/INSERT/UPDATE/DELETE
@@ -61,9 +62,29 @@ public class MainClass3 {
 	public static void mysqlConnet()
 	{
 		try {
-			int a=10/0; //catch로 이동
-			System.out.println(a); //실행에서 제외
-			
+			//1. 드라이버 등록
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//2. MYSQL연결
+			String url="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+			Connection conn=DriverManager.getConnection(url,"root","happy");
+			//3. SQL문장 
+			String sql="SELECT * FROM member";
+			//4. SQL문장을 Mysql로 전송
+			PreparedStatement ps=conn.prepareStatement(sql);
+			//5. 실행후에 결과값을 받는다
+			ResultSet rs=ps.executeQuery();//rs가 결과값을 갖는다.
+			while(rs.next())
+			{
+				// 한줄식 => 데이터while문 한번에 => 데이터 5개 읽는다
+				System.out.println(rs.getInt(1)+" "
+						+rs.getString(2)+" "
+						+rs.getString(3)+" "
+						+rs.getString(4)+" "
+						+rs.getString(5));
+			}
+			rs.close();
+			ps.close();
+			conn.close();
 		}catch(Exception ex)
 		{
 			// 에러 메세지
