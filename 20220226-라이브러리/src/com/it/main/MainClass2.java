@@ -1,6 +1,6 @@
 package com.it.main;
 //	clone : 복제
-class Member{
+class Member implements Cloneable{
 	int no;
 	String name;
 	/*
@@ -21,6 +21,12 @@ class Member{
 	{
 		System.out.println("no"+no+",name="+name);
 	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+	
 }
 public class MainClass2 {
 
@@ -32,7 +38,16 @@ public class MainClass2 {
 		m2.display();
 		m2.name="이순신";
 		m2.display();
-
+		
+		try {
+	
+		Member m3=(Member)m1.clone();
+		m3.no =11;
+		m3.name="영차";
+		m3.display();
+		}catch(Exception ex) {}
+	
+		m2.display();
 	}
 
 }
