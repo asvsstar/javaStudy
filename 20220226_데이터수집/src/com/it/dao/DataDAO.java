@@ -24,14 +24,14 @@ import java.sql.*;
 public class DataDAO {
    private Connection conn;
    private PreparedStatement ps;
-   private final String URL="jdbc:oracle:thin:@211.238.142.181:1521:XE";
+   private final String URL="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
    private static DataDAO dao;
    // 드라이버 등록 
    public DataDAO()
    {
 	   try
 	   {
-		   Class.forName("oracle.jdbc.driver.OracleDriver");
+		   Class.forName("com.mysql.cj.jdbc.Driver");
 	   }catch(Exception ex){}
    }
    // 연결 
@@ -39,7 +39,7 @@ public class DataDAO {
    {
 	   try
 	   {
-		   conn=DriverManager.getConnection(URL,"hr","happy");
+		   conn=DriverManager.getConnection(URL,"root","happy");
 	   }catch(Exception ex) {}
    }
    public void disConnection()
