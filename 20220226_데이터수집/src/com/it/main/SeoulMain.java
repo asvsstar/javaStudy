@@ -10,8 +10,8 @@ public class SeoulMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         SeoulMain sm=new SeoulMain();
-        //sm.seoulAttractions();
-        sm.seoulNature();
+        sm.seoulAttractions();
+        //sm.seoulNature();
         //sm.seoulHotel();
 	}
 	

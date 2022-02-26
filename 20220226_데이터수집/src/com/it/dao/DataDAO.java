@@ -272,9 +272,9 @@ public class DataDAO {
 		   ps=conn.prepareStatement(sql);
 		   ps.setInt(1, vo.getNo());
 		   ps.setString(2, vo.getTitle());
-		   ps.setString(3, vo.getPoster());
-		   ps.setString(4, vo.getMsg());
-		   ps.setString(5, vo.getAddress());
+		   ps.setString(4, vo.getPoster());
+		   ps.setString(5, vo.getMsg());
+		   ps.setString(3, vo.getAddress());
 		   ps.executeUpdate();
 	   }catch(Exception ex)
 	   {
